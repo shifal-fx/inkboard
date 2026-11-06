@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inkboard — The online whiteboard for teams</title>
+    <meta
+      name="description"
+      content="Inkboard is an infinite online whiteboard for brainstorming, planning and collaborating in real time."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <!-- The navbar is inserted here by script.js -->
+    <div id="site-nav"></div>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-stage">
+          <!-- The one canvas touch in the hero: a single, slowly drifting cursor -->
+          <div class="cursor hero-cursor" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.5-7.5L20 11z" style="fill: var(--accent); stroke: var(--bg)" stroke-width="1.5" /></svg>
+            <b>Aisha</b>
+          </div>
+
+          <div class="hero-content reveal">
+            <span class="eyebrow">New: AI-powered templates</span>
+            <h1>Where great ideas <em>take shape</em>, together</h1>
+            <p>
+              The online whiteboard for brainstorming, planning and teaching,
+              together in real time.
+            </p>
+            <div class="hero-cta">
+              <a href="signup.html" class="btn btn-primary btn-lg"
+                >Start whiteboarding — it's free</a
+              >
+              <a href="product.html" class="btn btn-ghost btn-lg"
+                >See how it works</a
+              >
+            </div>
+            <p class="hero-note">Free forever plan · No credit card needed</p>
+          </div>
+          </div>
+
+          <!-- Whiteboard mockup (pure HTML/CSS, no images) -->
+          <div class="board reveal d2" aria-hidden="true">
+            <div class="board-topbar">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <div class="board-title">Q4 Product Brainstorm</div>
+              <div class="avatars">
+                <span>AK</span>
+                <span>RM</span>
+                <span>SJ</span>
+                <span style="background: var(--surface-2); color: var(--muted)"
+                  >+4</span
+                >
+              </div>
+            </div>
+
+            <div class="board-toolbar">
+              <span class="on"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m4 4 7 16 2.5-6.5L20 11z" /></svg
+              ></span>
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4Z" /></svg
+              ></span>
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="4" y="4" width="16" height="16" rx="2" /></svg
+              ></span>
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="8" /></svg
+              ></span>
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="M5 6h14M12 6v13" /></svg
+              ></span>
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 4h14v11l-5 5H5z" />
+                  <path d="M14 20v-5h5" /></svg
+              ></span>
+            </div>
+
+            <!-- Hand-drawn connectors -->
+            <svg
+              class="board-svg"
+              viewBox="0 0 1040 480"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M270 160 C 340 150, 380 150, 430 170"
+                fill="none"
+                style="stroke: var(--faint)"
+                stroke-width="2"
+                stroke-dasharray="6 6"
+                stroke-linecap="round"
+              />
+              <path
+                d="M330 320 C 410 340, 460 340, 520 330"
+                fill="none"
+                style="stroke: var(--faint)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M512 325 l 10 5 -10 6"
+                fill="none"
+                style="stroke: var(--faint)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <ellipse
+                cx="830"
+                cy="380"
+                rx="90"
+                ry="34"
+                fill="none"
+                style="stroke: var(--faint)"
+                stroke-width="2"
+                transform="rotate(-4 830 380)"
+              />
+              <text
+                x="782"
+                y="386"
+                font-family="Geist, sans-serif"
+                font-weight="500"
+                font-size="16"
+                style="fill: var(--text)"
+              >
+                Launch
+              </text>
+            </svg>
+
+            <div class="sticky s1">
+              Real-time cursors for everyone<small>— Aisha</small>
+            </div>
+            <div class="sticky s2">
+              Template library for retros<small>— Rahul</small>
+            </div>
+            <div class="sticky s3">
+              Export to PDF &amp; PNG<small>— Sara</small>
+            </div>
+            <div class="sticky s4">
+              Voice notes on sticky notes?<small>— Dev</small>
+            </div>
+
+            <div class="board-card">
+              <h4>Sprint progress</h4>
+              <div class="bar"><i style="width: 82%"></i></div>
+              <div class="bar"><i style="width: 58%"></i></div>
+              <div class="bar"><i style="width: 34%"></i></div>
+              <p style="font-size: 0.78rem; margin: 6px 0 0">
+                12 of 18 ideas shortlisted
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LOGOS ================= -->
+      <section class="logos">
+        <div class="container">
+          <p>Trusted by 2 million+ people at teams and schools worldwide</p>
+          <div class="logo-row">
+            <span>Northwind</span><span>Lumora</span><span>Vertexa</span
+            ><span>Quanta</span><span>Brightpath</span><span>Orbitly</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FEATURES ================= -->
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Features</span>
+            <h2>Everything you need to <em>think visually</em></h2>
+            <p>From quick sketches to company-wide plans, all on one canvas.</p>
+          </div>
+          <div class="grid grid-3">
+            <div class="card reveal">
+              <div class="icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="M3 12h18M12 3v18" />
+                  <circle cx="12" cy="12" r="9" />
+                </svg>
+              </div>
+              <h3>Infinite canvas</h3>
+              <p>Zoom, pan and organise unlimited ideas on one board.</p>
+            </div>
+            <div class="card reveal d1">
+              <div class="icon-box teal">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <circle cx="9" cy="8" r="3" />
+                  <circle cx="17" cy="9" r="2.5" />
+                  <path
+                    d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2 1-4 3.5-4S22 18 22 20"
+                  />
+                </svg>
+              </div>
+              <h3>Real-time collaboration</h3>
+              <p>
+See live cursors and edits as your team works.
+              </p>
+            </div>
+            <div class="card reveal d2">
+              <div class="icon-box pink">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+              </div>
+              <h3>300+ templates</h3>
+              <p>
+                Mind maps, retros, flowcharts and lesson plans.
+              </p>
+            </div>
+            <div class="card reveal">
+              <div class="icon-box amber">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4Z" />
+                </svg>
+              </div>
+              <h3>Smart drawing tools</h3>
+              <p>
+                Rough sketches snap into clean shapes.
+              </p>
+            </div>
+            <div class="card reveal d1">
+              <div class="icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  />
+                </svg>
+              </div>
+              <h3>Comments &amp; voting</h3>
+              <p>
+                Feedback on the board, @mentions and quick votes.
+              </p>
+            </div>
+            <div class="card reveal d2">
+              <div class="icon-box teal">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
+                  />
+                </svg>
+              </div>
+              <h3>Export &amp; share</h3>
+              <p>
+                One-click links, or export as PDF, PNG or SVG.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= USE CASES (tabs) ================= -->
+      <section class="section alt-bg" id="usecases">
+        <div class="container" data-tabs>
+          <div class="section-head reveal">
+            <span class="eyebrow">Use cases</span>
+            <h2>One board, <em>endless possibilities</em></h2>
+            <p>Teams, classrooms and creators turn messy thinking into clear plans.</p>
+          </div>
+
+          <div class="tabs">
+            <button class="tab active" data-target="uc-teams">Teams</button>
+            <button class="tab" data-target="uc-edu">Education</button>
+            <button class="tab" data-target="uc-design">Design</button>
+            <button class="tab" data-target="uc-eng">Engineering</button>
+          </div>
+
+          <div class="tab-panel usecase active" id="uc-teams">
+            <div>
+              <h2>Run meetings people <em>actually enjoy</em></h2>
+              <p>
+                Stand-ups, retros and planning on one shared board.
+              </p>
+              <ul class="checklist">
+                <li>Built-in timer and voting for focused workshops</li>
+                <li>Retro, roadmap and OKR templates</li>
+                <li>Works alongside Zoom, Meet and Teams</li>
+              </ul>
+              <a href="product.html" class="btn btn-primary"
+                >Explore for teams</a
+              >
+            </div>
+            <div class="visual v-purple">
+              <div
+                class="sticky float"
+                style="
+                  top: 40px;
+                  left: 40px;
+                  background: var(--note-yellow);
+                  --r: -3deg;
+                "
+              >
+                What went well? 🎉
+              </div>
+              <div
+                class="sticky float"
+                style="
+                  top: 60px;
+                  left: 200px;
+                  background: var(--note-pink);
+                  --r: 2deg;
+                  animation-delay: -2s;
+                "
+              >
+                What can improve?
+              </div>
+              <div
+                class="sticky float"
+                style="
+                  top: 190px;
+                  left: 110px;
+                  background: var(--note-green);
+                  --r: -1deg;
+                  animation-delay: -4s;
+                "
+              >
+                Action items ✅
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel usecase" id="uc-edu">
+            <div>
+              <h2>Make every lesson <em>interactive</em></h2>
+              <p>
+                Lively lessons and group work in a safe, shared space.
+              </p>
+              <ul class="checklist">
+                <li>Free for verified teachers and students</li>
+                <li>Lesson plans, worksheets and graphic organisers</li>
+                <li>Classroom mode with teacher controls</li>
+              </ul>
+              <a href="pricing.html" class="btn btn-primary"
+                >See education plans</a
+              >
+            </div>
+            <div class="visual v-teal">
+              <div
+                class="sticky float"
+                style="
+                  top: 40px;
+                  left: 50px;
+                  background: var(--note-blue);
+                  --r: -2deg;
+                "
+              >
+                The Water Cycle 💧
+              </div>
+              <div
+                class="sticky float"
+                style="
+                  top: 80px;
+                  left: 220px;
+                  background: var(--note-green);
+                  --r: 3deg;
+                  animation-delay: -3s;
+                "
+              >
+                Evaporation → Condensation
+              </div>
+              <div
+                class="sticky float"
+                style="
+                  top: 200px;
+                  left: 130px;
+                  background: var(--note-yellow);
+                  --r: -1deg;
+                  animation-delay: -1s;
+                "
+              >
+                Group 3: Precipitation
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel usecase" id="uc-design">
+            <div>
+              <h2>From <em>moodboard</em> to wireframe</h2>
+              <p>
+                Gather inspiration and sketch flows before a pixel is final.
+              </p>
+              <ul class="checklist">
+                <li>Drop in images, links and videos</li>
+                <li>Wireframe kits and user-journey maps</li>
+                <li>Comment threads tied to any element</li>
+              </ul>
+              <a href="product.html" class="btn btn-primary"
+                >Explore for designers</a
+              >
+            </div>
+            <div class="visual v-pink">
+              <div
+                class="sticky float"
+                style="
+                  top: 40px;
+                  left: 40px;
+                  background: var(--note-pink);
+                  --r: -2deg;
+                "
+              >
+                Moodboard: soft &amp; playful
+              </div>
+              <div
+                class="sticky float"
+                style="
+                  top: 70px;
+                  left: 210px;
+                  background: var(--note-yellow);
+                  --r: 2deg;
+                  animation-delay: -2s;
+                "
+              >
+                Onboarding flow v2
+              </div>
+              <div
+                class="sticky float"
+                style="
+                  top: 200px;
+                  left: 100px;
+                  background: var(--note-blue);
+                  --r: -3deg;
+                  animation-delay: -4s;
+                "
+              >
+                Feedback: bigger CTA
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel usecase" id="uc-eng">
+            <div>
+              <h2>Map systems <em>before</em> you build them</h2>
+              <p>
+                Diagram architecture and plan sprints with your whole squad.
+              </p>
+              <ul class="checklist">
+                <li>Flowchart and architecture shape libraries</li>
+                <li>Embed boards in Jira, GitHub and Notion</li>
+                <li>Version history to roll back any change</li>
+              </ul>
+              <a href="product.html" class="btn btn-primary"
+                >Explore for engineers</a
+              >
+            </div>
+            <div class="visual v-amber">
+              <div
+                class="sticky float"
+                style="
+                  top: 40px;
+                  left: 40px;
+                  background: var(--note-blue);
+                  --r: -1deg;
+                "
+              >
+                Client → API Gateway
+              </div>
+              <div
+                class="sticky float"
+                style="
+                  top: 80px;
+                  left: 220px;
+                  background: var(--note-green);
+                  --r: 2deg;
+                  animation-delay: -3s;
+                "
+              >
+                Auth service
+              </div>
+              <div
+                class="sticky float"
+                style="
+                  top: 200px;
+                  left: 120px;
+                  background: var(--note-yellow);
+                  --r: -2deg;
+                  animation-delay: -1s;
+                "
+              >
+                Database &amp; cache
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= HOW IT WORKS ================= -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">How it works</span>
+            <h2>Up and running in <em>under a minute</em></h2>
+            <p>Three steps from a blank page to a shared plan.</p>
+          </div>
+          <!-- Steps as frames, joined by one thin straight line (drawn in CSS) -->
+          <div class="frames">
+            <div class="frame reveal">
+              <span class="frame-label">Frame 01</span>
+              <h3>Create a board</h3>
+              <p>Start from a blank canvas or one of 300+ templates.</p>
+            </div>
+            <div class="frame reveal d1">
+              <span class="frame-label">Frame 02</span>
+              <h3>Invite your people</h3>
+              <p>Share a link. No installs, no accounts needed to join.</p>
+            </div>
+            <div class="frame reveal d2">
+              <span class="frame-label">Frame 03</span>
+              <h3>Create together</h3>
+              <p>Draw, vote and comment live, then export or present.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TEMPLATES ================= -->
+      <section class="section alt-bg" id="templates">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Templates</span>
+            <h2>Start with a template, <em>not a blank page</em></h2>
+            <p>Ready-made boards for the work you already do.</p>
+          </div>
+          <div class="grid grid-4">
+            <a href="signup.html" class="card template reveal">
+              <div class="template-preview">
+                <i
+                  style="
+                    left: 40%;
+                    top: 40%;
+                    width: 20%;
+                    height: 20%;
+                    background: var(--faint);
+                    border-radius: 50%;
+                    border: 0;
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 12%;
+                    top: 18%;
+                    width: 20%;
+                    height: 16%;
+                    background: var(--note-yellow);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 68%;
+                    top: 18%;
+                    width: 20%;
+                    height: 16%;
+                    background: var(--note-pink);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 12%;
+                    top: 66%;
+                    width: 20%;
+                    height: 16%;
+                    background: var(--note-green);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 68%;
+                    top: 66%;
+                    width: 20%;
+                    height: 16%;
+                    background: var(--note-blue);
+                  "
+                ></i>
+              </div>
+              <div class="template-body">
+                <h3>Mind map</h3>
+                <p>Branch out ideas fast</p>
+              </div>
+            </a>
+            <a href="signup.html" class="card template reveal d1">
+              <div class="template-preview">
+                <i
+                  style="
+                    left: 8%;
+                    top: 15%;
+                    width: 26%;
+                    height: 70%;
+                    background: var(--surface);
+                    border: 1px solid var(--line);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 37%;
+                    top: 15%;
+                    width: 26%;
+                    height: 70%;
+                    background: var(--surface);
+                    border: 1px solid var(--line);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 66%;
+                    top: 15%;
+                    width: 26%;
+                    height: 70%;
+                    background: var(--surface);
+                    border: 1px solid var(--line);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 12%;
+                    top: 25%;
+                    width: 18%;
+                    height: 14%;
+                    background: var(--note-green);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 41%;
+                    top: 25%;
+                    width: 18%;
+                    height: 14%;
+                    background: var(--note-yellow);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 70%;
+                    top: 25%;
+                    width: 18%;
+                    height: 14%;
+                    background: var(--note-pink);
+                  "
+                ></i>
+              </div>
+              <div class="template-body">
+                <h3>Sprint retro</h3>
+                <p>Reflect and improve</p>
+              </div>
+            </a>
+            <a href="signup.html" class="card template reveal d2">
+              <div class="template-preview">
+                <i
+                  style="
+                    left: 10%;
+                    top: 40%;
+                    width: 18%;
+                    height: 20%;
+                    background: var(--note-blue);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 41%;
+                    top: 20%;
+                    width: 18%;
+                    height: 20%;
+                    background: var(--note-pink);
+                    transform: rotate(45deg);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 41%;
+                    top: 62%;
+                    width: 18%;
+                    height: 20%;
+                    background: var(--note-yellow);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 72%;
+                    top: 40%;
+                    width: 18%;
+                    height: 20%;
+                    background: var(--note-green);
+                    border-radius: 50%;
+                  "
+                ></i>
+              </div>
+              <div class="template-body">
+                <h3>Flowchart</h3>
+                <p>Map any process</p>
+              </div>
+            </a>
+            <a href="signup.html" class="card template reveal d3">
+              <div class="template-preview">
+                <i
+                  style="
+                    left: 8%;
+                    top: 22%;
+                    width: 84%;
+                    height: 8%;
+                    background: var(--note-yellow);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 8%;
+                    top: 42%;
+                    width: 55%;
+                    height: 8%;
+                    background: var(--note-green);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 30%;
+                    top: 62%;
+                    width: 50%;
+                    height: 8%;
+                    background: var(--note-blue);
+                  "
+                ></i>
+                <i
+                  style="
+                    left: 50%;
+                    top: 80%;
+                    width: 40%;
+                    height: 8%;
+                    background: var(--note-pink);
+                  "
+                ></i>
+              </div>
+              <div class="template-body">
+                <h3>Roadmap</h3>
+                <p>Plan the quarter ahead</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= STATS ================= -->
+      <section class="section-sm">
+        <div class="container">
+          <div class="stats grid grid-4 center reveal">
+            <div class="stat">
+              <strong>2M+</strong><span>Active users</span>
+            </div>
+            <div class="stat">
+              <strong>15M</strong><span>Boards created</span>
+            </div>
+            <div class="stat"><strong>190</strong><span>Countries</span></div>
+            <div class="stat">
+              <strong>4.8★</strong><span>Average rating</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TESTIMONIALS ================= -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Loved by teams</span>
+            <h2>Don't just take <em>our word</em> for it</h2>
+            <p>What teams say after a few weeks on Inkboard.</p>
+          </div>
+          <div class="grid grid-3">
+            <div class="card quote reveal">
+              <div class="stars">★★★★★</div>
+              <p>
+                "Our remote retros went from awkward to genuinely fun. Inkboard
+                feels like being in the same room."
+              </p>
+              <div class="person">
+                <div class="av">PN</div>
+                <div>
+                  <b>Priya Nair</b><span>Engineering Manager, Lumora</span>
+                </div>
+              </div>
+            </div>
+            <div class="card quote reveal d1">
+              <div class="stars">★★★★★</div>
+              <p>
+                "My students collaborate on mind maps every week. It's simple
+                enough for 10-year-olds to use."
+              </p>
+              <div class="person">
+                <div class="av">MD</div>
+                <div><b>Marcus Dean</b><span>Science Teacher</span></div>
+              </div>
+            </div>
+            <div class="card quote reveal d2">
+              <div class="stars">★★★★★</div>
+              <p>
+                "We replaced three tools with Inkboard. Workshops, wireframes
+                and roadmaps all live in one place."
+              </p>
+              <div class="person">
+                <div class="av">LC</div>
+                <div><b>Lena Costa</b><span>Head of Design, Orbitly</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="section-sm">
+        <div class="container">
+          <div class="cta reveal">
+            <h2>Ready to bring your ideas <em>to life?</em></h2>
+            <p>
+              Free to start. Your first board takes seconds.
+            </p>
+            <a href="signup.html" class="btn btn-white btn-lg"
+              >Create your first board</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- The footer is inserted here by script.js -->
+    <div id="site-footer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

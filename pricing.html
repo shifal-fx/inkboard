@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Inkboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="pricing">
+  <div id="site-nav"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow">Pricing</span>
+        <h1>Simple pricing for <em>every team</em></h1>
+        <p>Start free and upgrade when you need more.</p>
+        <div class="billing-toggle">
+          <button class="active" data-billing="monthly">Monthly</button>
+          <button data-billing="yearly">Yearly <span class="save-badge">Save 20%</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans -->
+    <section style="padding-bottom:96px">
+      <div class="container">
+        <div class="grid grid-3 plans">
+          <div class="card plan reveal">
+            <h3>Free</h3>
+            <p>For individuals getting started.</p>
+            <div class="price"><strong data-monthly="$0" data-yearly="$0">$0</strong><span>/ forever</span></div>
+            <p class="price-note">No credit card required</p>
+            <ul class="checklist">
+              <li>3 editable boards</li>
+              <li>Unlimited viewers</li>
+              <li>50+ basic templates</li>
+              <li>Export as PNG</li>
+            </ul>
+            <a href="signup.html" class="btn btn-ghost btn-block">Get started</a>
+          </div>
+
+          <div class="card plan featured reveal d1">
+            <span class="popular">Most popular</span>
+            <h3>Pro</h3>
+            <p>For professionals and small teams.</p>
+            <div class="price"><strong data-monthly="$8" data-yearly="$6.40">$8</strong><span>/ user / month</span></div>
+            <p class="price-note" data-note-monthly="Billed monthly" data-note-yearly="Billed $76.80 yearly">Billed monthly</p>
+            <ul class="checklist">
+              <li>Unlimited boards</li>
+              <li>All 300+ templates</li>
+              <li>AI assist (500 credits/month)</li>
+              <li>Export as PDF, PNG &amp; SVG</li>
+              <li>Version history (90 days)</li>
+            </ul>
+            <a href="signup.html" class="btn btn-primary btn-block">Start 14-day free trial</a>
+          </div>
+
+          <div class="card plan reveal d2">
+            <h3>Business</h3>
+            <p>For growing organisations.</p>
+            <div class="price"><strong data-monthly="$16" data-yearly="$12.80">$16</strong><span>/ user / month</span></div>
+            <p class="price-note" data-note-monthly="Billed monthly" data-note-yearly="Billed $153.60 yearly">Billed monthly</p>
+            <ul class="checklist">
+              <li>Everything in Pro</li>
+              <li>Unlimited AI assist</li>
+              <li>SSO &amp; admin controls</li>
+              <li>Private team workspaces</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="signup.html" class="btn btn-ghost btn-block">Start free trial</a>
+          </div>
+        </div>
+
+        <div class="card reveal" style="margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+          <div>
+            <h3 style="margin-bottom:4px">Enterprise</h3>
+            <p style="margin:0">Advanced security, data residency, SCIM and a dedicated success manager.</p>
+          </div>
+          <a href="help.html#contact" class="btn btn-primary">Contact sales</a>
+        </div>
+        <p class="center" style="margin-top:20px;font-size:.92rem">Teachers and students get Pro free. <a href="help.html" class="link">Learn how →</a></p>
+      </div>
+    </section>
+
+    <!-- Comparison table -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Compare <em>plans</em></h2>
+          <p>All the details, side by side.</p>
+        </div>
+        <div class="compare-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr><th>Features</th><th>Free</th><th>Pro</th><th>Business</th></tr>
+            </thead>
+            <tbody>
+              <tr class="group"><td colspan="4">Boards</td></tr>
+              <tr><td>Editable boards</td><td>3</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Templates</td><td>50+</td><td>300+</td><td>300+ &amp; custom</td></tr>
+              <tr><td>Version history</td><td class="no">—</td><td>90 days</td><td>Unlimited</td></tr>
+              <tr class="group"><td colspan="4">Collaboration</td></tr>
+              <tr><td>Real-time editing</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Comments &amp; voting</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Timer &amp; facilitation tools</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr class="group"><td colspan="4">Productivity</td></tr>
+              <tr><td>AI assist</td><td class="no">—</td><td>500 credits</td><td>Unlimited</td></tr>
+              <tr><td>Export formats</td><td>PNG</td><td>PNG, PDF, SVG</td><td>PNG, PDF, SVG</td></tr>
+              <tr><td>Integrations</td><td>Basic</td><td>All</td><td>All</td></tr>
+              <tr class="group"><td colspan="4">Security &amp; admin</td></tr>
+              <tr><td>SSO (SAML)</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+              <tr><td>Admin dashboard</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+              <tr><td>Support</td><td>Community</td><td>Email</td><td>Priority</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><h2>Pricing <em>questions</em></h2><p>The short answers to what people ask most.</p></div>
+        <div class="faq reveal">
+          <details open>
+            <summary>Is the Free plan really free?</summary>
+            <p>Yes. The Free plan is free forever, with no credit card required. Upgrade only when you need more boards or features.</p>
+          </details>
+          <details>
+            <summary>Can I change plans later?</summary>
+            <p>Absolutely. You can upgrade, downgrade or cancel at any time from your account settings. Changes are prorated.</p>
+          </details>
+          <details>
+            <summary>What payment methods do you accept?</summary>
+            <p>We accept all major credit and debit cards, UPI, and invoicing for annual Business and Enterprise plans.</p>
+          </details>
+          <details>
+            <summary>Do you offer discounts for non-profits?</summary>
+            <p>Yes — registered non-profits get 50% off Pro and Business. Contact our team to apply.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="script.js"></script>
+</body>
+</html>

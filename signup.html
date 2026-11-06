@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up — Inkboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="signup">
+  <div id="site-nav"></div>
+
+  <main class="auth">
+    <div class="auth-side">
+      <h2>Your ideas deserve a <em>bigger canvas.</em></h2>
+      <p>Join 2 million+ people who brainstorm, plan and teach on Inkboard.</p>
+      <div style="margin-top:24px">
+        <div class="sticky float" style="background:var(--note-yellow);--r:-3deg">Free forever plan ✨</div>
+        <div class="sticky float" style="background:var(--note-pink);--r:2deg;animation-delay:-2s">300+ templates</div>
+        <div class="sticky float" style="background:var(--note-green);--r:-1deg;animation-delay:-4s">Invite unlimited guests</div>
+      </div>
+    </div>
+
+    <div class="auth-form">
+      <form id="signupForm" novalidate>
+        <h2 style="font-size:1.9rem">Create your <em>account</em></h2>
+        <p>Already have one? <a href="#" class="link">Log in</a></p>
+
+        <div class="social-btns">
+          <button type="button" class="btn btn-ghost">Google</button>
+          <button type="button" class="btn btn-ghost">Microsoft</button>
+        </div>
+        <div class="divider">or sign up with email</div>
+
+        <div class="form-success" id="formSuccess">🎉 Account created! (Demo only — nothing was sent.)</div>
+
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" type="text" placeholder="Aisha Khan" />
+          <div class="msg">Please enter your name.</div>
+        </div>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" type="email" placeholder="you@company.com" />
+          <div class="msg">Please enter a valid email address.</div>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="At least 8 characters" />
+          <div class="msg">Password must be at least 8 characters.</div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Create free account</button>
+        <p style="font-size:.8rem;margin-top:14px;text-align:center">By signing up you agree to our <a href="#" class="link">Terms</a> and <a href="#" class="link">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

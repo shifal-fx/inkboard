@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — Inkboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="product">
+  <div id="site-nav"></div>
+
+  <main>
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow">Product</span>
+        <h1>A whiteboard that <em>thinks with you</em></h1>
+        <p>Every tool to sketch, organise and present ideas, on one fast canvas.</p>
+        <div class="hero-cta">
+          <a href="signup.html" class="btn btn-primary btn-lg">Try Inkboard free</a>
+          <a href="pricing.html" class="btn btn-ghost btn-lg">View pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature rows -->
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+
+        <div class="feature-row reveal">
+          <div class="feature-text">
+            <span class="eyebrow">Canvas</span>
+            <h2>Infinite space for <em>infinite ideas</em></h2>
+            <p>Zoom from overview to detail. Group work into frames and layers.</p>
+            <ul class="checklist">
+              <li>Unlimited canvas size with smooth zoom</li>
+              <li>Frames, sections and layers</li>
+              <li>Minimap and quick search across the board</li>
+            </ul>
+          </div>
+          <div class="visual v-purple">
+            <div class="sticky float" style="top:50px;left:50px;background:var(--note-yellow);--r:-3deg">Frame: Research</div>
+            <div class="sticky float" style="top:90px;left:230px;background:var(--note-blue);--r:2deg;animation-delay:-2s">Frame: Ideas</div>
+            <div class="sticky float" style="top:210px;left:120px;background:var(--note-green);--r:-1deg;animation-delay:-4s">Frame: Decisions</div>
+          </div>
+        </div>
+
+        <div class="feature-row reverse reveal">
+          <div class="feature-text">
+            <span class="eyebrow">Collaboration</span>
+            <h2>Work together, <em>live or async</em></h2>
+            <p>Invite unlimited guests and keep conversations next to the work.</p>
+            <ul class="checklist">
+              <li>Live cursors, presence and follow mode</li>
+              <li>Threaded comments with @mentions</li>
+              <li>Voting, timers and reactions for workshops</li>
+            </ul>
+          </div>
+          <div class="visual v-teal">
+            <div class="sticky float" style="top:50px;left:60px;background:var(--note-pink);--r:2deg">👍 5 votes</div>
+            <div class="sticky float" style="top:80px;left:240px;background:var(--note-yellow);--r:-2deg;animation-delay:-3s">@Rahul can you check this?</div>
+            <div class="sticky float" style="top:210px;left:140px;background:var(--note-green);--r:1deg;animation-delay:-1s">⏱ 04:59 left</div>
+          </div>
+        </div>
+
+        <div class="feature-row reveal">
+          <div class="feature-text">
+            <span class="eyebrow">Tools</span>
+            <h2>Draw freely, <em>finish cleanly</em></h2>
+            <p>Sketch freely and let smart shapes tidy everything up.</p>
+            <ul class="checklist">
+              <li>Pens, highlighter, shapes and connectors</li>
+              <li>Shape recognition and auto-alignment</li>
+              <li>Sticky notes, text, tables and images</li>
+            </ul>
+          </div>
+          <div class="visual v-pink">
+            <div class="sticky float" style="top:50px;left:50px;background:var(--note-blue);--r:-2deg">✏️ Sketch</div>
+            <div class="sticky float" style="top:90px;left:230px;background:var(--note-pink);--r:3deg;animation-delay:-2s">⬛ Snap to shape</div>
+            <div class="sticky float" style="top:210px;left:130px;background:var(--note-yellow);--r:-1deg;animation-delay:-4s">➡️ Connect</div>
+          </div>
+        </div>
+
+        <div class="feature-row reverse reveal">
+          <div class="feature-text">
+            <span class="eyebrow">AI assist</span>
+            <h2>Get <em>unstuck</em> with AI</h2>
+            <p>Generate maps from a prompt, cluster notes and summarise boards.</p>
+            <ul class="checklist">
+              <li>Generate diagrams and templates from text</li>
+              <li>Auto-cluster and summarise sticky notes</li>
+              <li>Turn boards into meeting notes</li>
+            </ul>
+          </div>
+          <div class="visual v-amber">
+            <div class="sticky float" style="top:50px;left:60px;background:var(--note-green);--r:1deg">✨ "Plan a product launch"</div>
+            <div class="sticky float" style="top:90px;left:240px;background:var(--note-yellow);--r:-2deg;animation-delay:-3s">Theme: Pricing (12)</div>
+            <div class="sticky float" style="top:210px;left:130px;background:var(--note-blue);--r:2deg;animation-delay:-1s">Summary ready ✅</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrations -->
+    <section class="section alt-bg" id="integrations">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Integrations</span>
+          <h2>Plays <em>nicely</em> with your tools</h2>
+          <p>Connect the apps your team already uses every day.</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="card integration reveal"><div class="int-logo">S</div><div><h3>Slack</h3><p>Board updates in channels</p></div></div>
+          <div class="card integration reveal d1"><div class="int-logo">Z</div><div><h3>Zoom</h3><p>Whiteboard in meetings</p></div></div>
+          <div class="card integration reveal d2"><div class="int-logo">J</div><div><h3>Jira</h3><p>Sync issues to cards</p></div></div>
+          <div class="card integration reveal d3"><div class="int-logo">G</div><div><h3>GitHub</h3><p>Link PRs and issues</p></div></div>
+          <div class="card integration reveal"><div class="int-logo">D</div><div><h3>Google Drive</h3><p>Import docs &amp; images</p></div></div>
+          <div class="card integration reveal d1"><div class="int-logo">T</div><div><h3>Microsoft Teams</h3><p>Collaborate in calls</p></div></div>
+          <div class="card integration reveal d2"><div class="int-logo">N</div><div><h3>Notion</h3><p>Embed live boards</p></div></div>
+          <div class="card integration reveal d3"><div class="int-logo">F</div><div><h3>Figma</h3><p>Bring in design frames</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security -->
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Security</span>
+          <h2>Enterprise-grade security, <em>built in</em></h2>
+          <p>Your ideas are valuable. We protect them like it.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card reveal">
+            <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg></div>
+            <h3>Encryption everywhere</h3>
+            <p>AES-256 encryption at rest and TLS 1.3 in transit for every board.</p>
+          </div>
+          <div class="card reveal d1">
+            <div class="icon-box teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>SSO &amp; access controls</h3>
+            <p>SAML SSO, SCIM provisioning and granular permissions per board.</p>
+          </div>
+          <div class="card reveal d2">
+            <div class="icon-box pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h3>Compliance</h3>
+            <p>SOC 2 Type II, GDPR-ready, with data residency options for Enterprise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>See it <em>for yourself</em></h2>
+          <p>Create a free board in seconds. No downloads, no credit card.</p>
+          <a href="signup.html" class="btn btn-white btn-lg">Get started free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
